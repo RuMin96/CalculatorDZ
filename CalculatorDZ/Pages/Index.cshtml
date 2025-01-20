@@ -1,0 +1,36 @@
+﻿@page
+@model CalculatorDZ.Pages.IndexModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial App</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <h1>Side App!</h1>
+
+    <form action="/" method="get">
+
+        <label for="a">a:</label>
+        <input type="number" id="a" name="a" min="1" required value="@Model.A"/>
+       
+        <label for="b">b:</label>
+        <input type="number" id="b" name="b" min="1" required value="@Model.B"/>
+        
+    
+        <label for="angle">angle:</label>
+        <input type="number" id="angle" name="angle" min="1" required value="@Model.Angle"/>
+
+        <label for="rad">rad</label>
+        <input type="radio" id="rad" name="angleUnit" value="rad" checked="@(Model.AngleeUnit=="rad")" />
+        <label for="deg">deg</label>
+        <input type="radio" id="deg" name="angleUnit" value="deg" checked="@(Model.AngleeUnit=="deg")" />
+
+        <button>Calculate</button>
+
+        <p>@Model.C</p>
+    </form>
+</body>
+</html>
